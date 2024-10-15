@@ -195,9 +195,7 @@
                                 const imgHtml = `<li><img src="http://127.0.0.1:8000${photo.photo_url}" alt="Image"></li>`;
                                 $(this).find('.ebl_img_list').append(imgHtml);
                             }.bind(this));
-                            $(this).find('.ebl_img_list').append(`<li><a class="ebl_img_add" href="#">
-            <span>Загрузить фото</span>
-        </a></li>`);
+                            $(this).find('.ebl_img_list').append(`<li><a class="ebl_img_add" href="#"><span>Загрузить фото</span></a></li>`);
                         }.bind(this),
                         error: function(error) {
                             alert('Ошибка при получении изображений: ' + error.responseText);
@@ -208,60 +206,59 @@
 
             function createYearHtml(year) {
                 return `
-        <li class="edit_building_list_act">
-            <div class="ebl_head" style="cursor: pointer;">
-                <div class="ebl_year">${year}</div>
-                <a href="#" class="ebl_del"><span>Удалить год</span></a>
-            </div>
-            <div class="ebl_content">
-                <div class="ebl_nav">
-                    <select class="select_style" style="padding: 15px">
-                        <option value="A">Выберите литеру</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                    </select>
-                    <select class="month-select" style="padding: 15px">
-                        <option value="">Выберите месяц</option>
-                        <option value="Январь">Январь</option>
-                        <option value="Февраль">Февраль</option>
-                        <option value="Март">Март</option>
-                        <option value="Апрель">Апрель</option>
-                        <option value="Май">Май</option>
-                        <option value="Июнь">Июнь</option>
-                        <option value="Июль">Июль</option>
-                        <option value="Август">Август</option>
-                        <option value="Сентябрь">Сентябрь</option>
-                        <option value="Октябрь">Октябрь</option>
-                        <option value="Ноябрь">Ноябрь</option>
-                        <option value="Декабрь">Декабрь</option>
-                    </select>
-                    <a class="btn_main add-month" style="float: none;" href="#">Добавить месяц</a>
-                    <div class="ebl_format">Максимальный размер одного файла 2 Мб. Принимаются файлы jpg, gif, png</div>
-                </div>
-            </div>
-        </li>
-    `;
+                        <li class="edit_building_list_act">
+                            <div class="ebl_head" style="cursor: pointer;">
+                                <div class="ebl_year">${year}</div>
+                                <a href="#" class="ebl_del"><span>Удалить год</span></a>
+                            </div>
+                            <div class="ebl_content">
+                                <div class="ebl_nav">
+                                    <select class="select_style" style="padding: 15px">
+                                        <option value="A">Выберите литеру</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                    </select>
+                                    <select class="month-select" style="padding: 15px">
+                                        <option value="">Выберите месяц</option>
+                                        <option value="Январь">Январь</option>
+                                        <option value="Февраль">Февраль</option>
+                                        <option value="Март">Март</option>
+                                        <option value="Апрель">Апрель</option>
+                                        <option value="Май">Май</option>
+                                        <option value="Июнь">Июнь</option>
+                                        <option value="Июль">Июль</option>
+                                        <option value="Август">Август</option>
+                                        <option value="Сентябрь">Сентябрь</option>
+                                        <option value="Октябрь">Октябрь</option>
+                                        <option value="Ноябрь">Ноябрь</option>
+                                        <option value="Декабрь">Декабрь</option>
+                                    </select>
+                                    <a class="btn_main add-month" style="float: none;" href="#">Добавить месяц</a>
+                                    <div class="ebl_format">Максимальный размер одного файла 2 Мб. Принимаются файлы jpg, gif, png</div>
+                                </div>
+                            </div>
+                        </li>
+                    `;
             }
 
 
             function createMonthHtml(month) {
                 return `
-    <div class="ebl_month">
-    <div style="display:flex">
-        <div class="ebl_month_name">${month}</div>
-        <a class="ebl_month_del" href="#"><span>Удалить месяц</span></a>
-        </div>
-        <ul class="ebl_img_list">
-            <li style="display: block;">
-                <a class="ebl_img_add" href="#">
-                    <span>Загрузить фото</span>
-                </a>
-            </li>
-            <!-- Здесь будет отображаться список изображений -->
-        </ul>
-    </div>
-    `;
+                        <div class="ebl_month">
+                            <div style="display:flex">
+                                <div class="ebl_month_name">${month}</div>
+                                <a class="ebl_month_del" href="#"><span>Удалить месяц</span></a>
+                            </div>
+                            <ul class="ebl_img_list">
+                                <li style="display: block;">
+                                    <a class="ebl_img_add" href="#">
+                                        <span>Загрузить фото</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        `;
             }
 
 
